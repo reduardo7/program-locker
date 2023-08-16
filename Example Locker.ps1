@@ -1,7 +1,7 @@
 $InputText = Read-Host "Clave"
 
 $Timestamp = [Math]::Floor(
-  [datetimeoffset]::Now.ToUnixTimeMilliSeconds() / 1000 / 60
+    [datetimeoffset]::Now.ToUnixTimeMilliSeconds() / 1000 / 60
 ) + 2
 
 for ($j = 0; $j -le 5; $j++) {
@@ -28,9 +28,9 @@ for ($j = 0; $j -le 5; $j++) {
     #Write-Host "input_text: $InputText"
 
     if ($Clave -eq $InputText) {
-		Write-Host "Correcto!"
-		pause
-		exit
+        Write-Host "Correcto!"
+        Start-Process -FilePath "test.exe"
+        exit
     }
 }
 
